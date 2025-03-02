@@ -47,7 +47,7 @@ export function TrustSection() {
           <FadeIn direction="left" delay={0.2}>
             <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/why.webp"
                 alt="Financial advisors in a meeting"
                 width={600}
                 height={600}
