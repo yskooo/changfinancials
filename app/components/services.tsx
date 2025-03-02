@@ -1,4 +1,4 @@
-import { TrendingUp, PiggyBank, BarChart4, Building, ShieldCheck } from "lucide-react"
+import { TrendingUp, PiggyBank, BarChart4, Building, ShieldCheck, BookIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
@@ -30,6 +30,11 @@ export function Services() {
       title: "Risk & Insurance Advisory",
       description: "Protective strategies to safeguard your assets and investments from uncertainties.",
       icon: <ShieldCheck className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Book Keeping",
+      description: "Accurate and organized financial records to ensure seamless tracking of income, expenses, and overall financial health.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
     },
   ]
 
