@@ -28,7 +28,7 @@ export function FounderProfile() {
               </FadeIn>
               <FadeIn direction="left" delay={0.3}>
                 <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Chang Velasco
+                  Chang Velasco III
                 </h2>
               </FadeIn>
               <FadeIn direction="left" delay={0.4}>
@@ -37,14 +37,14 @@ export function FounderProfile() {
               <div className="space-y-4 text-muted-foreground">
                 <FadeIn direction="left" delay={0.5}>
                   <p>
-                    With over two decades of experience in financial services, Michael Chang has established himself as
+                    With over two decades of experience in financial services, Chang has established himself as
                     a trusted advisor to individuals and businesses seeking to achieve their financial goals.
                   </p>
                 </FadeIn>
                 <FadeIn direction="left" delay={0.6}>
                   <p>
                     After graduating from Harvard Business School and spending 10 years at leading financial
-                    institutions, Michael founded Chang Financials with a vision to provide personalized, comprehensive
+                    institutions, Chang founded Chang Financials with a vision to provide personalized, comprehensive
                     financial solutions that put clients first.
                   </p>
                 </FadeIn>
