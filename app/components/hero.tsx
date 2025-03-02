@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { FadeIn } from "./fade-in"
 
 export function Hero() {
   return (
@@ -15,59 +16,69 @@ export function Hero() {
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-6">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
-                Trusted Financial Advisory Since 2000
-              </div>
-              <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl">
-                Secure Your Financial Future with Expert Guidance
-              </h1>
-              <p className="max-w-[600px] text-muted-foreground text-lg sm:text-xl md:text-2xl">
-                Tailored financial solutions to grow, protect, and manage your wealth with confidence and clarity.
-              </p>
+              <FadeIn direction="down" delay={0.2}>
+                <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
+                  Trusted Financial Advisory Since 2000
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.4}>
+                <h1 className="font-serif text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl xl:text-7xl">
+                  Secure Your Financial Future with Expert Guidance
+                </h1>
+              </FadeIn>
+              <FadeIn delay={0.6}>
+                <p className="max-w-[600px] text-muted-foreground text-lg sm:text-xl md:text-2xl">
+                  Tailored financial solutions to grow, protect, and manage your wealth with confidence and clarity.
+                </p>
+              </FadeIn>
             </div>
-            <div className="flex flex-col gap-4 min-[400px]:flex-row">
-              <Button
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full"
-                size="lg"
-                asChild
-              >
-                <Link href="#book-consultation">Book a Free Consultation</Link>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-6 text-lg border-secondary text-secondary hover:bg-secondary/10 rounded-full"
-                asChild
-              >
-                <Link href="#services">Explore Our Services</Link>
-              </Button>
-            </div>
-            <div className="grid grid-cols-3 gap-4 pt-8 items-center">
-              <div className="space-y-2">
-                <h4 className="text-3xl font-bold">23+</h4>
-                <p className="text-muted-foreground">Years Experience</p>
+            <FadeIn direction="up" delay={0.8}>
+              <div className="flex flex-col gap-4 min-[400px]:flex-row">
+                <Button
+                  className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-full"
+                  size="lg"
+                  asChild
+                >
+                  <Link href="#book-consultation">Book a Free Consultation</Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-6 text-lg border-secondary text-secondary hover:bg-secondary/10 rounded-full"
+                  asChild
+                >
+                  <Link href="#services">Explore Our Services</Link>
+                </Button>
               </div>
-              <div className="space-y-2">
-                <h4 className="text-3xl font-bold">5K+</h4>
-                <p className="text-muted-foreground">Clients Served</p>
+            </FadeIn>
+            <FadeIn direction="up" delay={1}>
+              <div className="grid grid-cols-3 gap-4 pt-8 items-center">
+                <div className="space-y-2">
+                  <h4 className="text-3xl font-bold">23+</h4>
+                  <p className="text-muted-foreground">Years Experience</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="text-3xl font-bold">5K+</h4>
+                  <p className="text-muted-foreground">Clients Served</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="text-3xl font-bold">98%</h4>
+                  <p className="text-muted-foreground">Client Satisfaction</p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <h4 className="text-3xl font-bold">98%</h4>
-                <p className="text-muted-foreground">Client Satisfaction</p>
-              </div>
-            </div>
+            </FadeIn>
           </div>
-          <div className="hidden lg:block relative">
+          <FadeIn direction="left" delay={0.6} className="hidden lg:block relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-secondary/20 to-transparent rounded-2xl" />
             <Image
-              src="/hero-finance.jpg"
+              src="/hero.webp"
               alt="Professional financial planning"
               width={800}
               height={900}
               className="rounded-2xl object-cover w-full h-full shadow-2xl"
               priority
             />
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>
