@@ -28,7 +28,7 @@ export function FounderProfile() {
               </FadeIn>
               <FadeIn direction="left" delay={0.3}>
                 <h2 className="font-serif text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Chang Velasco III
+                  Chang Velasco III, CPA
                 </h2>
               </FadeIn>
               <FadeIn direction="left" delay={0.4}>
