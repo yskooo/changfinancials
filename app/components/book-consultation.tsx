@@ -1,5 +1,8 @@
+'use client'
+import { useState } from "react"
 import { ConsultationForm } from "./consultation-form"
 import { FadeIn } from "./fade-in"
+import { cn } from "@/lib/utils"
 
 export function BookConsultation() {
   const steps = [
@@ -8,6 +11,8 @@ export function BookConsultation() {
     { number: 3, title: "Details" },
     { number: 4, title: "Confirm" },
   ]
+
+  const [currentStep, setCurrentStep] = useState(1)
 
   return (
     <section
@@ -30,30 +35,38 @@ export function BookConsultation() {
             </FadeIn>
           </div>
         </div>
+
+        {/* Stepper UI */}
         <div className="mx-auto max-w-lg space-y-6 mt-8">
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center items-center space-x-4">
             {steps.map((step, index) => (
-              <FadeIn key={step.number} direction="down" delay={0.2 + index * 0.1}>
-                <div className="flex flex-col items-center">
+              <div key={step.number} className="flex items-center">
+                <div className="relative flex flex-col items-center">
                   <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-full ${
-                      step.number === 1 ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
-                    }`}
+                    className={cn(
+                      "w-12 h-12 flex items-center justify-center rounded-full border-2 text-sm font-semibold transition-colors",
+                      currentStep >= step.number
+                        ? "border-secondary bg-secondary text-white"
+                        : "border-muted-foreground text-muted-foreground"
+                    )}
                   >
                     {step.number}
                   </div>
-                  {index < steps.length - 1 && <div className="h-0.5 w-12 self-center bg-muted mt-6" />}
-                  <span className="text-sm mt-2">{step.title}</span>
+                  <span className="mt-2 text-xs">{step.title}</span>
                 </div>
-              </FadeIn>
+                {index < steps.length - 1 && (
+                  <div className={cn("w-12 h-0.5", currentStep > step.number ? "bg-secondary" : "bg-muted")} />
+                )}
+              </div>
             ))}
           </div>
+
+          {/* Consultation Form with Step Control */}
           <FadeIn delay={0.6}>
-            <ConsultationForm />
+            <ConsultationForm currentStep={currentStep} setCurrentStep={setCurrentStep} />
           </FadeIn>
         </div>
       </div>
     </section>
   )
 }
-
