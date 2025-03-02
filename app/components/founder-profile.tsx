@@ -12,7 +12,7 @@ export function FounderProfile() {
           <FadeIn direction="right" className="relative aspect-square lg:aspect-[4/5]">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-secondary/10 to-transparent rounded-2xl" />
             <Image
-              src="/founder.jpg"
+              src="/chang.webp"
               alt="Michael Chang - Founder & CEO"
               width={600}
               height={800}
