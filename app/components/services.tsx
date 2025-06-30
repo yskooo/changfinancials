@@ -36,6 +36,52 @@ export function Services() {
       description: "Accurate and organized financial records to ensure seamless tracking of income, expenses, and overall financial health.",
       icon: <BookIcon className="h-10 w-10 text-primary" />,
     },
+    // New services extracted from the image
+    {
+      title: "Annual Income Tax Return (ITR) Preparation",
+      description: "Professional preparation of your Annual Income Tax Return to ensure compliance and accuracy.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Statement of Management Responsibility",
+      description: "Assistance in preparing the Statement of Management Responsibility for financial reporting.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Annual Financial Statements",
+      description: "Preparation of comprehensive Annual Financial Statements for individuals and businesses.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Inventory List & Sworn Declaration Filing",
+      description: "Guidance and filing services for Inventory List and Sworn Declarations.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Manual Book of Accounts Registration",
+      description: "Assistance with the registration of manual books of accounts as required by regulations.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "TIN Application",
+      description: "Support and processing for Tax Identification Number (TIN) applications.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Quarterly Tax Filing & Compliance",
+      description: "Ensuring timely and accurate quarterly tax filings and compliance with tax regulations.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "Other BIR Compliance & Assistance",
+      description: "Comprehensive assistance with various other Bureau of Internal Revenue (BIR) compliance requirements.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
+    {
+      title: "SSS, PhilHealth and Pag-IBIG Remittance",
+      description: "Handling remittances for SSS, PhilHealth, and Pag-IBIG contributions.",
+      icon: <BookIcon className="h-10 w-10 text-primary" />,
+    },
   ]
 
   return (
